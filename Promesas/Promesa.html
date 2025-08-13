@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Promesas</title>
+
+</head>
+
+<body>
+
+    <header class="bg-primary text-white py-4 mb-4">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold">Ejercicio Promesas</h1>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-primary text-white">
+                        ¿Qué es una Promesa en JavaScript?
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Una Promesa es un objeto que representa la eventual finalización (éxito o fracaso) de una
+                            operación asíncrona. Permite manejar operaciones asíncronas de manera más limpia y legible
+                            que los callbacks tradicionales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-primary text-white">
+                        Estados de una Promesa
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Una Promesa tiene tres estados:
+                            <br>
+                            <strong>Pending (pendiente):</strong> Estado inicial, no cumplida ni rechazada.
+                            <br>
+                            <strong>Fulfilled (cumplida):</strong> La operación se completó con éxito.
+                            <br>
+                            <strong>Rejected (rechazada):</strong> La operación falló.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="card container border border-5 mt-4">
+        <section class="card-body">
+            <nav>
+                <h2 class="card-title">Validar Nombre con Promesa</h2>
+            </nav>
+            <form action="">
+                <label for="nombre">Ingresa tu nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre aquí">
+                <button class="btn btn-primary" onclick="validarNombre()">Validar</button>
+                <p id="mensaje">Esperando validación...</p>
+            </form>
+        </section>
+    </div>
+
+    <div class="card container border border-5 mt-4">
+        <section class="card-body">
+            <nav>
+                <h2 class="card-title">Verificar Edad con Promesa 🧑‍⚖️</h2>
+            </nav>
+            <form action="">
+                <label for="">Con Espera Espera 1.5 segundos</label>
+                <input type="number" class="form-control" id="edadInput" placeholder="Ingresa tu edad" />
+                <button id="btnVerificar" class="btn btn-primary" type="button">Verificar Edad</button>
+            </form>
+            <p id="resultadoEdad"></p>
+        </section>
+    </div>
+
+    <div class="card container border border-5 mt-4">
+        <section class="card-body">
+            <nav>
+                <h2 class="card-title">Sumar dos numeros</h2>
+            </nav>
+            <form action="">
+                <label for="">Numero:</label>
+                <input type="number" class="form-control" placeholder="Ingrese un Numero" id="n1" required>
+                <label for="">Numero:</label>
+                <input type="number" class="form-control" placeholder="Ingrese un Numero" id="n2" required>
+                <button type="button" class="btn btn-primary" onclick="sumar()">Sumar </button>
+                <p id="resultadoSuma"></p>
+            </form>
+        </section>
+    </div>
+
+    <div class="card container border border-5 mt-4">
+        <section class="card-body">
+            <nav>
+                <h2 class="card-title">Usuarios desde API</h2>
+            </nav>
+            <form action="">
+                <label for="">Presionar Boton para cargar Datos.</label>
+                <button id="btnCargar" class="btn btn-primary" type="button">Cargar Usuarios</button>
+            </form>
+            <ul id="listaUsuarios"></ul>
+        </section>
+    </div>
+
+    <footer class="bg-body-tertiary text-dark pt-4 mt-4">
+        <div class="container">
+            <div class="row">
+                <!-- Sección 1: Páginas -->
+                <div class="col-md-4 mb-3">
+                    <h5>Páginas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-body">Inicio</a></li>
+                        <li><a href="Funciones/index.html" class="text-decoration-none text-body">Funciones</a></li>
+                        <li><a href="Funciones_Arrows/Funcion_Arrows.html"
+                                class="text-decoration-none text-body">Funciones Arrow</a></li>
+                        <li><a href="CallBack/callback.html" class="text-decoration-none text-body">Callback</a>
+                        </li>
+                        <li><a href="Promesas/Promesa.html" class="text-decoration-none text-body">Promesas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección 2: Nosotros -->
+                <div class="col-md-4 mb-3">
+                    <h5>Nosotros</h5>
+                    <p class="small">Somos un equipo apasionado por la tecnología y el desarrollo web, comprometidos
+                        con
+                        la enseñanza y el aprendizaje interactivo.</p>
+                </div>
+
+                <!-- Sección 3: Contáctanos -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contáctanos</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: <a href="mailto:contacto@tusitio.com"
+                                class="text-decoration-none text-body">contacto@tusitio.com</a></li>
+                        <li>Tel: +57 301 000 0000</li>
+                        <li>Dirección: Calle Ficticia #123, Antioquia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center py-3 border-top">
+                © 2025 TuSitio. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

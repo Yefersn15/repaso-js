@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones Arrow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+    <header class="bg-primary text-white py-4 mb-4">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold">Ejercicio Arrow</h1>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-primary text-white">
+                        ¿Qué son las Funciones Arrow?
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Las funciones arrow (=>) son una sintaxis concisa introducida en ES6 para escribir funciones
+                            en JavaScript. Tienen un comportamiento diferente con el keyword 'this' y no poseen sus
+                            propios 'arguments'.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-primary text-white">
+                        Ventajas de las Funciones Arrow
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Las funciones arrow permiten una sintaxis más corta, no vinculan su propio 'this' (heredan
+                            el contexto léxico), son ideales para funciones anónimas y mejoran la legibilidad del
+                            código, especialmente en callbacks y métodos de array.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejercicio 1: Saludar con nombre ingresado -->
+    <div class="card container border border-5 mt-4">
+        <section class="card-body">
+            <nav>
+                <h3 class="card-title">Saludar 👋🏽</h3>
+            </nav>
+            <form action="">
+                <label for="miInput">Nombre:</label>
+                <input type="text" class="form-control" id="miInput" placeholder="Ingresar nombre..." required />
+                <button type="button" class="btn btn-primary" id="miBoton">Mostrar Resultado</button>
+                <p id="resultado"></p>
+            </form>
+        </section>
+    </div>
+
+    <!-- Ejercicio 2: Sumar dos números -->
+    <div class="card container border border-5 mt-4">
+        <section class="card-body">
+            <nav>
+                <h3 class="card-title">Sumar 🧮</h3>
+            </nav>
+            <form action="">
+                <label for="n1">1er Número:</label>
+                <input type="number" class="form-control" id="n1" placeholder="Ingrese un número" required />
+
+                <label for="n2">2do Número:</label>
+                <input type="number" class="form-control" id="n2" placeholder="Ingrese otro número" required />
+
+                <label for="operacion">Operacion a Realizar:</label>
+                <select name="" class="form-select" id="operacion">
+                    <option value="sumar">Sumar</option>
+                    <option value="restar">Restar</option>
+                    <option value="multiplicar">Multiplicar</option>
+                    <option value="dividir">Dividir</option>
+                    <option value="potenciar">Potenciar</option>
+                </select>
+                <button class="btn btn-primary" id="botonCalcular" type="button">Calcular</button>
+                <p id="calculo"></p>
+            </form>
+        </section>
+    </div>
+
+    <!-- Ejercicio 3: Calcular total de una venta -->
+    <div class="card container border border-5 mt-4">
+        <section class="card-body">
+            <nav>
+                <h3 class="card-title">Calcular Venta 💸</h3>
+            </nav>
+            <form action="">
+                <label for="producto">Nombre del producto:</label>
+                <input type="text" class="form-control" id="producto" placeholder="Nombre del producto" required />
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" required />
+
+                <label for="precio">Precio:</label>
+                <input type="number" class="form-control" id="precio" placeholder="Precio" required />
+
+                <label for="resultado_Compra">Factura de Pago:</label>
+                <input type="text" class="form-control" id="resultado_Compra" placeholder="Factura de Pago:" disabled />
+
+                <button type="button" class="btn btn-primary" id="botonCompra">Calcular Venta</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="bg-body-tertiary text-dark pt-4 mt-4">
+        <div class="container">
+            <div class="row">
+                <!-- Sección 1: Páginas -->
+                <div class="col-md-4 mb-3">
+                    <h5>Páginas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-body">Inicio</a></li>
+                        <li><a href="Funciones/index.html" class="text-decoration-none text-body">Funciones</a></li>
+                        <li><a href="Funciones_Arrows/Funcion_Arrows.html"
+                                class="text-decoration-none text-body">Funciones Arrow</a></li>
+                        <li><a href="CallBack/callback.html" class="text-decoration-none text-body">Callback</a>
+                        </li>
+                        <li><a href="Promesas/index.html" class="text-decoration-none text-body">Promesas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección 2: Nosotros -->
+                <div class="col-md-4 mb-3">
+                    <h5>Nosotros</h5>
+                    <p class="small">Somos un equipo apasionado por la tecnología y el desarrollo web, comprometidos
+                        con
+                        la enseñanza y el aprendizaje interactivo.</p>
+                </div>
+
+                <!-- Sección 3: Contáctanos -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contáctanos</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: <a href="mailto:contacto@tusitio.com"
+                                class="text-decoration-none text-body">contacto@tusitio.com</a></li>
+                        <li>Tel: +57 301 000 0000</li>
+                        <li>Dirección: Calle Ficticia #123, Antioquia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center py-3 border-top">
+                © 2025 TuSitio. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

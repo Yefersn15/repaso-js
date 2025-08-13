@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>CallBack Ventas</title>
+</head>
+
+<body>
+    <header class="bg-primary text-white py-4 mb-4">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold">Ejercicio CallBack</h1>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-primary text-white">
+                        ¿Qué es CallBack?
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Un callback es una función que se pasa como argumento a otra función para ser ejecutada más
+                            tarde.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-primary text-white">
+                        ¿Para qué Funciona Callback?
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Un callback funciona para ejecutar una función una vez se haya completado otra, permitiendo
+                            controlar el orden de ejecución en operaciones asincrónicas como lecturas de archivos,
+                            solicitudes a servidores o eventos del usuario.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="card container border border-5 mt-4">
+        <section class="card-body">
+            <nav>
+                <h3 class="card-title">Calcular Venta</h3>
+            </nav>
+            <form action="">
+                <label for="producto">Nombre del producto:</label>
+                <input type="text" class="form-control" id="producto" required>
+
+                <label for="precio">Valor unitario:</label>
+                <input type="number" class="form-control" id="precio" required>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" class="form-control" id="cantidad" required>
+                <button type="button" class="btn btn-primary" id="calcular">Calcular Precio Total</button>
+                <br>
+                <label for="subtotal">Subtotal:</label>
+                <input type="number" class="form-control" id="subtotal" disabled>
+
+                <label for="iva">IVA:</label>
+                <input type="number" class="form-control" id="iva" disabled>
+
+                <label for="descuento">descuento:</label>
+                <input type="number" class="form-control" id="descuento" disabled>
+
+                <label for="total">Total Pagar:</label>
+                <input type="number" class="form-control" id="total" disabled>
+                <button type="reset" class="btn btn-primary" id="reset">Limpiar formulario</button>
+            </form>
+        </section>
+    </div>
+    <div class="card container mt-5 border border-5">
+        <section class="card-body">
+            <nav>
+                <h3 class="card-title">Calcular Edad</h3>
+            </nav>
+
+            <form action="">
+                <label for="numero1">Nombre:</label><br>
+                <input type="text" class="form-control" id="nombre" required>
+
+                <label for="numero2">Fecha Nacimiento:</label><br>
+                <input type="date" class="form-control" id="fechaNacimiento" required>
+
+                <label for="edad">Edad:</label><br>
+                <input type="text" class="form-control" disabled id="resultadoEdad">
+                <br>
+                <button type="button" class="btn btn-primary" id="edad">Calcular Edad</button>
+
+                <button type="reset" class="btn btn-primary" id="reset">Limpiar formulario</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="bg-body-tertiary text-dark pt-4 mt-4">
+        <div class="container">
+            <div class="row">
+                <!-- Sección 1: Páginas -->
+                <div class="col-md-4 mb-3">
+                    <h5>Páginas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-decoration-none text-body">Inicio</a></li>
+                        <li><a href="../Funciones/index.html" class="text-decoration-none text-body">Funciones</a></li>
+                        <li><a href="../Funciones_Arrows/Funcion_Arrows.html"
+                                class="text-decoration-none text-body">Funciones Arrow</a></li>
+                        <li><a href="../CallBack/callback.html" class="text-decoration-none text-body">Callback</a></li>
+                        <li><a href="../Promesas/index.html" class="text-decoration-none text-body">Promesas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección 2: Nosotros -->
+                <div class="col-md-4 mb-3">
+                    <h5>Nosotros</h5>
+                    <p class="small">Somos un equipo apasionado por la tecnología y el desarrollo web, comprometidos con
+                        la enseñanza y el aprendizaje interactivo.</p>
+                </div>
+
+                <!-- Sección 3: Contáctanos -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contáctanos</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: <a href="mailto:contacto@tusitio.com"
+                                class="text-decoration-none text-body">contacto@tusitio.com</a></li>
+                        <li>Tel: +57 301 000 0000</li>
+                        <li>Dirección: Calle Ficticia #123, Antioquia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center py-3 border-top">
+                © 2025 TuSitio. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
